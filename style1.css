@@ -1,0 +1,35 @@
+html {
+    background-color: rgb(241, 206, 212);
+    h1{
+
+        text-align: center; /* Centraliza todo o texto na página */
+        font-size: 2rem; /* Tamanho do título */
+        margin: 0; /* Remove a margem padrão */
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline; /* Exibe os itens na mesma linha */
+    margin-right: 40px; /* Aumente o espaço entre os itens */
+}
+nav ul li a {
+    color: rgb(160, 69, 84); /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+}
+nav ul li a:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+     }
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: inline-block; /* Permite centralizar a lista */
+}
+nav {
+    background-color: lightpink;
+    padding: 10px;
+    text-align: center; /* Centraliza o conteúdo dentro da nav */
+    border: 2px solid rgb(160, 69, 84); /* Contorno com 2px de espessura e cor */

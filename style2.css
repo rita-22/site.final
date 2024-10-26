@@ -1,0 +1,41 @@
+html {
+    /*título*/
+
+    background-color: rgb(98, 135, 191);
+    h1{
+
+        text-align: center; /* Centraliza todo o texto na página */
+        font-size: 2em; /* Tamanho do título */
+        margin: 0; /* Remove a margem padrão */
+    }
+    
+
+
+/*cabeçalho*/
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline; /* Exibe os itens na mesma linha */
+    margin-right: 40px; /* Aumente o espaço entre os itens */
+}
+nav ul li a {
+    color: rgba(3, 63, 146, 0.799); /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+}
+nav ul li a:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+     }
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: inline-block; /* Permite centralizar a lista */
+}
+nav {
+    background-color: lightsteelblue;
+    padding: 10px;
+    text-align: center; /* Centraliza o conteúdo dentro da nav */
+    border: 2px solid rgba(3, 63, 146, 0.799); /* Contorno com 2px de espessura e cor */
+      
