@@ -1,45 +1,76 @@
 html {
-    /*título*/
-
     background-color: blanchedalmond;
-    h1{
-
-        text-align: center; /* Centraliza todo o texto na página */
-        font-size: 2em; /* Tamanho do título */
-        margin: 0; /* Remove a margem padrão */
 }
 
-/*cabeçalho*/
+/*título*/
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+h1 {
+    text-align: center; /* Centraliza todo o texto na página */
+    font-size: 2em; /* Tamanho do título */
+    margin: 0; /* Remove a margem padrão */
 }
-nav ul li {
-    display: inline; /* Exibe os itens na mesma linha */
-    margin-right: 40px; /* Aumente o espaço entre os itens */
+
+body {
+    height: 100%; /* Garante que o body ocupe toda a altura da página */
+    margin: 0; /* Remove a margem padrão */
+    font-family: Arial, sans-serif; /* Fonte padrão */
 }
-nav ul li a {
-    color:rgba(62, 0, 0, 0.813); /* Cor do texto */
-    text-decoration: none; /* Remove o sublinhado */
-}
-nav ul li a:hover {
-    text-decoration: underline; /* Sublinha ao passar o mouse */
-     }
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: inline-block; /* Permite centralizar a lista */
-}
+
+/* barra de navegação */
 nav {
     background-color: rgba(110, 79, 79, 0.658);
     padding: 10px;
     text-align: center; /* Centraliza o conteúdo dentro da nav */
     border: 2px solid rgba(62, 0, 0, 0.813); /* Contorno com 2px de espessura e cor */
-        body {
-            height: 50%; /* Garante que o body ocupe toda a altura da página */
-            margin: 0; /* Remove a margem padrão */
-            font-family: Arial, sans-serif; /* Fonte padrão */
-        }
-    
-</body>
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Usa Flexbox para a lista de navegação */
+    justify-content: center; /* Centraliza os itens */
+}
+
+nav ul li {
+    margin-right: 40px; /* Aumenta o espaço entre os itens */
+}
+
+nav ul li a {
+    color: rgba(62, 0, 0, 0.813); /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+}
+
+/*Menú*/
+.menu-toggle {
+    display: none; /* Esconde o checkbox */
+}
+
+.menu-icon {
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    font-size: 2rem; /* Tamanho do ícone do menu */
+    display: none; /* Esconde o ícone por padrão */
+}
+
+@media (max-width: 600px) {
+    .menu-icon {
+        display: block; /* Exibe o ícone do menu */
+    }
+
+    nav ul {
+        flex-direction: column; /* Muda para coluna em telas pequenas */
+        align-items: center; /* Centraliza os itens verticalmente */
+        display: none; /* Esconde a lista por padrão */
+    }
+
+    .menu-toggle:checked + .menu-icon + nav ul {
+        display: flex; /* Exibe a lista quando o checkbox é marcado */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Ajusta o espaço entre os itens */
+    }
+}
