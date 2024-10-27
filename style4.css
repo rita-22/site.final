@@ -72,4 +72,32 @@ nav ul li a:hover {
     nav ul li {
         margin: 10px 0; /* Ajusta o espaço entre os itens */
     }
+
+    /*imagem da Olívia*/
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        margin: 0;
+        height: 100vh; /* Altura total da janela */
+        display: flex;
+        justify-content: center; /* Centraliza o conteúdo horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        flex-direction: column; /* Alinha os itens em coluna */
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column; /* Alinha título e imagem em coluna */
+        align-items: flex-end; /* Alinha a imagem à direita */
+        width: 100%; /* Largura*/
+    }
+    
+    .foto {
+        max-width: 100%; /* Mantém a imagem toda a aparecer */
+        height: 100%; /* Mantém a imagem a ocupar "todo" o espaço */
+    }
+
 }
