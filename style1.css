@@ -54,7 +54,7 @@ nav ul li a:hover {
     nav ul {
         flex-direction: column; /* Muda para coluna em telas pequenas */
         align-items: center; /* Centraliza os itens verticalmente */
-        display: none; /* Esconde a lista por padrão */
+        display: none; /*faz desaparecer*/ 
     }
 
     .menu-toggle:checked + .menu-icon + nav ul {
