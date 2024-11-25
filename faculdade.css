@@ -1,0 +1,145 @@
+/* Estilo geral */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #eaf2e3; /* Verde pastel claro */
+    color: #4f6f52; /* Verde escuro para o texto */
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #a3c9a8; /* Verde pastel médio */
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #8ab78e; /* Verde mais escuro */
+}
+
+nav {
+    display: flex;
+    justify-content: center;  /* Centraliza os itens de navegação */
+    align-items: center;
+    width: 100%;  /* Garante que o nav ocupe toda a largura disponível */
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #4f6f52; /* Verde escuro */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: #3b5e3a; /* Verde mais escuro ao passar o mouse */
+}
+
+/* Ícone do menu responsivo */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    font-size: 2rem;
+    color: #4f6f52;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        display: none;
+        gap: 1rem;
+        width: 100%;
+        text-align: center;  /* Centraliza os itens de menu em telas pequenas */
+    }
+
+    .menu li a {
+        padding: 0.5rem 0;
+    }
+
+    .menu-toggle:checked + .menu-icon + .menu {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* Conteúdo principal */
+.content {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #c8e0c7; /* Verde pastel claro */
+    border-radius: 10px;
+    margin: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #3b5e3a; /* Verde mais escuro */
+}
+
+.content p {
+    font-size: 1.2rem;
+    color: #4f6f52; /* Verde escuro */
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1.5rem 2rem;
+    background-color: #4f6f52; /* Verde escuro */
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.contact-bar {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-bar a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.contact-bar a:hover {
+    color: #a3c9a8; /* Verde pastel médio ao passar o mouse */
+    transform: scale(1.2);
+}
+
+/* Ajustes para garantir responsividade em todos os tamanhos de ecrã */
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    .menu li a {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}

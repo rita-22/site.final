@@ -2,21 +2,21 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5; /* Cinza claro */
-    color: #333; /* Cinza escuro para o texto */
+    font-family: 'Arial', sans-serif;
+    background-color: #efe8e0; /* Bege claro */
+    color: #5c4033; /* Castanho escuro */
 }
 
 /* Cabeçalho */
 header {
-    background-color: #cccccc; /* Cinza médio */
+    background-color: #d2b48c; /* Bege médio */
     padding: 10px 20px;
-    border-bottom: 2px solid #999999; /* Cinza mais escuro */
+    border-bottom: 2px solid #8b4513; /* Castanho escuro */
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -30,23 +30,23 @@ nav {
 
 .menu li a {
     text-decoration: none;
-    color: #333333; /* Cinza escuro */
+    color: #5c4033; /* Castanho */
     font-weight: bold;
     transition: color 0.3s;
 }
 
 .menu li a:hover {
-    color: #777777; /* Cinza mais claro ao passar o mouse */
+    color: #8b4513; /* Tom mais escuro ao passar o mouse */
 }
 
-/* Ícone do menu */
+/* Ícone do menu responsivo */
 .menu-toggle {
     display: none;
 }
 
 .menu-icon {
     font-size: 2rem;
-    color: #333;
+    color: #5c4033;
     cursor: pointer;
     display: none;
 }
@@ -71,7 +71,7 @@ nav {
 .content {
     text-align: center;
     padding: 50px 20px;
-    background-color: #e0e0e0; /* Cinza claro */
+    background-color: #eddec2a0; /* Bege claro */
     border-radius: 10px;
     margin: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -80,32 +80,46 @@ nav {
 .content h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    color: #666666; /* Cinza médio */
+    color: #8b4513;
 }
 
 .content p {
     font-size: 1.2rem;
-    color: #555555; /* Cinza mais escuro */
+    color: #5c4033;
 }
 
-/* Imagem da Olívia */
-.container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+.coluna centro {
+     /* Alinhar texto ao centro */
+     .coluna.centro {
+        text-align: center;
+    }
 }
 
-.foto {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+/* Estilo do vídeo - Técnica de caixa responsiva */
+.video-wrapper {
+    position: relative;
+    width: 80%; /* Agora 80% da largura da tela */
+    max-width: 1200px; /* Limita o tamanho máximo do vídeo */
+    margin: 0 auto; /* Centraliza o vídeo */
+    height: 450px; /* Definimos a altura fixa */
+    background-color: #000; /* Fundaço preto para o vídeo */
+    border-radius: 15px; /* Bordas arredondadas */
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Mantém a altura fixa */
+    border-radius: 15px; /* Bordas arredondadas no vídeo também */
 }
 
 /* Rodapé */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #999999; /* Cinza escuro */
+    background-color: #8b4513; /* Castanho escuro */
     color: #fff;
     font-size: 0.9rem;
 }
@@ -125,6 +139,6 @@ footer {
 }
 
 .contact-bar a:hover {
-    color: #f5f5f5; /* Cinza muito claro ao passar o mouse */
+    color: #efe8e0; /* Bege claro ao passar o mouse */
     transform: scale(1.2);
 }

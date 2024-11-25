@@ -3,14 +3,15 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #e8f1ff;
-    color: #333;
+    background-color: #eaf2e3; /* Verde pastel claro */
+    color: #4f6f52; /* Verde escuro para o texto */
     box-sizing: border-box;
+    width: 100%;
 }
 
 /* Cabeçalho */
 header {
-    background: linear-gradient(45deg, #6a93d4, #3b6ebf);
+    background: linear-gradient(45deg, #6a93d4, #3b6ebf); /* Gradiente */
     padding: 10px 20px;
     border-bottom: 2px solid #27478b;
 }
@@ -21,6 +22,7 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .menu {
@@ -40,7 +42,7 @@ nav {
 }
 
 .menu li a:hover {
-    color: #27478b;
+    color: #27478b; /* Cor ao passar o mouse */
 }
 
 /* Ícone do menu responsivo */
@@ -76,21 +78,26 @@ nav {
     }
 }
 
-/* Seção de introdução */
-.intro {
+/* Conteúdo principal */
+.content {
     text-align: center;
     padding: 50px 20px;
-    background-color: #dbe7ff;
+    background-color: #c8e0c7; /* Verde pastel claro */
     border-radius: 10px;
     margin: 20px auto;
     max-width: 90%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.intro h1 {
-    font-size: 2rem;
+.content h1 {
+    font-size: 2.5rem;
     margin-bottom: 20px;
     color: #3b6ebf;
+}
+
+.content p {
+    font-size: 1.2rem;
+    color: #4f6f52;
 }
 
 /* Vídeo */
@@ -140,9 +147,27 @@ footer {
 }
 
 .contact-bar a:hover {
-    color: #27478b;
+    color: #e8f1ff;
     transform: scale(1.2);
 }
 
+/* Ajustes para garantir responsividade em todos os tamanhos de ecrã */
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    .menu li a {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
 
 

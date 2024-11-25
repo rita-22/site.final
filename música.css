@@ -128,7 +128,7 @@ footer {
 }
 
 .contact-bar a:hover {
-    color: #6a1b9a; /* Roxo muito suave ao passar o mouse */
+    color: rgba(193, 130, 245, 0.521); /* Roxo muito suave ao passar o mouse */
     transform: scale(1.2);
 }
 
