@@ -3,28 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Rita Martins">
-    <title>primeiro site da Rita <3 </title>
-    <link rel="stylesheet" href="style2.css">
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desporto</title>
+    <title>Desporto - Primeiro Site da Rita</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    
 </head>
 <body>
     <header>
         <nav>
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <label for="menu-toggle" class="menu-icon">☰</label>
-            <ul>
+            <ul class="menu">
                 <li><a href="index.html">Início</a></li>
                 <li><a href="desporto.html">Desporto</a></li>
                 <li><a href="cinema.html">Cinema</a></li>
                 <li><a href="musica.html">Música</a></li>
+                <li><a href="uni.html">Uni</a></li>
             </ul>
         </nav>
-    <h1>DANÇAS URBANAS</h1>
+    </header>
+    <main>
+        <section class="intro">
+            <h1>Danças Urbanas</h1>
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/K19BfrdAPPs?si=pf1aUIUZHeo3jd4e" 
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="contact-bar">
+            <a href="https://www.instagram.com/by.ritaaaa/" target="_blank" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@seu_usuario" target="_blank" aria-label="TikTok">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="mailto:ana2rita.m@gmail.com" aria-label="Email">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="tel:+351932665179" aria-label="Contato">
+                <i class="fa-solid fa-phone"></i>
+            </a>
+        </div>
+        <p>Rita Martins, feito com ❤</p>
+    </footer>
     
-    <br> </br>
-    <div class="video-container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/K19BfrdAPPs?si=pf1aUIUZHeo3jd4e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
 </body>
+</html>

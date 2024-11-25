@@ -1,92 +1,109 @@
-html {
-    background-color: rgb(98, 135, 191);
-}
-
-/*título*/
-
-h1 {
-    text-align: center; /* Centraliza todo o texto na página */
-    font-size: 2em; /* Tamanho do título */
-    margin: 0; /* Remove a margem padrão */
-}
-body {
-    height: 100%; /* Garante que o body ocupe toda a altura da página */
-    margin: 0; /* Remove a margem padrão */
-    font-family: Arial, sans-serif; /* Fonte padrão */
-}
-
-/* barra de navegação */
-nav {
-    background-color: lightsteelblue;
-    padding: 10px;
-    text-align: center; /* Centraliza o conteúdo dentro da nav */
-    border: 2px solid rgba(3, 63, 146, 0.799); /* Contorno com 2px de espessura e cor */
-}
-
-nav ul {
-    list-style-type: none;
+/* Estilo geral */
+html, body {
+    margin: 0;
     padding: 0;
-    display: flex; /* Usa Flexbox para a lista de navegação */
-    justify-content: center; /* Centraliza os itens */
+    font-family: 'Arial', sans-serif;
+    background-color: #e8f1ff;
+    color: #333;
+    box-sizing: border-box;
 }
 
-nav ul li {
-    margin-right: 40px; /* Aumenta o espaço entre os itens */
+/* Cabeçalho */
+header {
+    background: linear-gradient(45deg, #6a93d4, #3b6ebf);
+    padding: 10px 20px;
+    border-bottom: 2px solid #27478b;
 }
 
-nav ul li a {
-    color: rgba(3, 63, 146, 0.799); /* Cor do texto */
-    text-decoration: none; /* Remove o sublinhado */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-nav ul li a:hover {
-    text-decoration: underline; /* Sublinha ao passar o mouse */
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
 }
 
-/* Menu*/
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
 
+.menu li a:hover {
+    color: #27478b;
+}
+
+/* Ícone do menu responsivo */
 .menu-toggle {
-    display: none; /* Esconde o checkbox */
+    display: none;
 }
 
 .menu-icon {
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    font-size: 2rem; /* Tamanho do ícone do menu */
-    display: none; /* Esconde o ícone por padrão */
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
 }
 
-@media (max-width: 600px) {
+/* Responsividade */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .menu {
+        flex-direction: column;
+        display: none;
+        gap: 10px;
+    }
+
+    .menu-toggle:checked + .menu-icon + .menu {
+        display: flex;
+    }
+
     .menu-icon {
-        display: block; /* Exibe o ícone do menu */
-    }
-
-    nav ul {
-        flex-direction: column; /* Muda para coluna em telas pequenas */
-        align-items: center; /* Centraliza os itens verticalmente */
-        display: none; /* Esconde a lista por padrão */
-    }
-
-    .menu-toggle:checked + .menu-icon + nav ul {
-        display: flex; /* Exibe a lista quando o checkbox é marcado */
-    }
-
-    nav ul li {
-        margin: 10px 0; /* Ajusta o espaço entre os itens */
+        display: block;
     }
 }
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+
+/* Seção de introdução */
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #dbe7ff;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 90%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/*vídeo*/
+.intro h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #3b6ebf;
+}
 
+/* Vídeo */
 .video-container {
     position: relative;
     width: 100%;
     height: 0;
     padding-bottom: 56.25%; /* Proporção 16:9 */
+    margin: 0 auto;
+    max-width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .video-container iframe {
@@ -95,7 +112,37 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    border: none; /* Remove a borda do iframe */
+    border: none;
 }
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #27478b;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.contact-bar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.contact-bar a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.contact-bar a:hover {
+    color: #27478b;
+    transform: scale(1.2);
+}
+
 
 

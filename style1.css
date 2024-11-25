@@ -1,77 +1,128 @@
-html {
-    background-color: rgb(241, 206, 212);
+/* Estilo geral */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f1f5;
+    color: #333;
 }
 
-/*título*/
-
-h1 {
-    text-align: center; /* Centraliza todo o texto na página */
-    font-size: 2rem; /* Tamanho do título */
-    margin: 0; /* Remove a margem padrão */
+/* Cabeçalho */
+header {
+    background: linear-gradient(45deg, #ffb6c1, #f08080);
+    padding: 10px 20px;
+    border-bottom: 2px solid #c96e84;
 }
-
-/*barra de navegação*/
 
 nav {
-    background-color: lightpink;
-    padding: 10px;
-    text-align: center; /* Centraliza o conteúdo dentro da nav */
-    border: 2px solid rgb(160, 69, 84); /* Contorno com 2px de espessura e cor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-nav ul {
-    list-style-type: none;
+.menu {
+    list-style: none;
+    margin: 0;
     padding: 0;
-    display: flex; /* Usa Flexbox para a lista de navegação */
-    justify-content: center; /* Centraliza os itens */
+    display: flex;
+    gap: 20px;
 }
 
-nav ul li {
-    margin-right: 40px; /* Aumenta o espaço entre os itens */
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s;
 }
 
-nav ul li a {
-    color: rgb(160, 69, 84); /* Cor do texto */
-    text-decoration: none; /* Remove o sublinhado */
+.menu li a:hover {
+    color: #a13d56;
 }
 
-nav ul li a:hover {
-    text-decoration: underline; /* Sublinha ao passar o mouse */
-}
-
-/* Menú */
+/* Ícone do menu responsivo */
 .menu-toggle {
-    display: none; /* Esconde o checkbox */
+    display: none;
 }
 
 .menu-icon {
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    font-size: 2rem; /* Tamanho do ícone do menu */
-    display: none; /* Esconde o ícone por padrão */
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
 }
 
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column; /* Muda para coluna em telas pequenas */
-        align-items: center; /* Centraliza os itens verticalmente */
-        display: none; /*faz desaparecer*/ 
+/* Responsividade */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
     }
 
-    .menu-toggle:checked + .menu-icon + nav ul {
-        display: flex; /* Exibe a lista quando o checkbox é marcado */
+    .menu {
+        flex-direction: column;
+        display: none;
+        gap: 10px;
+    }
+
+    .menu-toggle:checked + .menu-icon + .menu {
+        display: flex;
     }
 
     .menu-icon {
-        display: block; /* Exibe o ícone do menu */
-        margin-bottom: 10px; /* Espaço abaixo do ícone */
-    }
-
-    nav ul li {
-        margin: 10px 0; /* Ajusta o espaço entre os itens */
+        display: block;
     }
 }
 
-/* Checkbox para controle do menu */
-.menu-toggle {
-    display: none; /* Esconde o checkbox */
+/* Seção de introdução */
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffe6ea;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.intro h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #c96e84;
+}
+
+.intro p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color:#c96e84;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.contact-bar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.contact-bar a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.contact-bar a:hover {
+    color: #a13d56;
+    transform: scale(1.2);
+}
+
