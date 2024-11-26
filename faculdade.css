@@ -100,30 +100,53 @@ nav {
 /* Rodapé */
 footer {
     text-align: center;
-    padding: 1.5rem 2rem;
+    padding: 10px; /* Tamanho reduzido do rodapé */
     background-color: #4f6f52; /* Verde escuro */
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 0.8rem; /* Fonte ligeiramente reduzida */
+    margin-top: 20px;
+    width: 100%; /* Garante que o rodapé ocupe toda a largura */
 }
 
+/* Barra de contatos */
 .contact-bar {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 15px; /* Ajuste no espaçamento entre ícones */
+    margin-bottom: 5px; /* Ajuste no espaçamento entre ícones */
 }
 
 .contact-bar a {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.3rem; /* Tamanho ajustado dos ícones */
     text-decoration: none;
     transition: color 0.3s, transform 0.2s;
 }
 
 .contact-bar a:hover {
     color: #a3c9a8; /* Verde pastel médio ao passar o mouse */
-    transform: scale(1.2);
+    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
 }
+
+/* Estrutura para garantir que o rodapé fique no fundo */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o conteúdo ocupe a altura completa da tela */
+    margin: 0; /* Remove margens padrão */
+}
+
+/* A área principal (conteúdo) vai ocupar o espaço restante */
+main {
+    flex-grow: 1; /* Faz com que a área principal ocupe todo o espaço disponível */
+}
+
+/* Ajuste final para garantir que o rodapé fique no fundo */
+footer {
+    position: relative;  /* Torna o rodapé com um posicionamento normal */
+    margin-top: auto; /* Garante que o rodapé fique na parte inferior */
+}
+
 
 /* Ajustes para garantir responsividade em todos os tamanhos de ecrã */
 @media (max-width: 480px) {

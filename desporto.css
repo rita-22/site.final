@@ -122,34 +122,68 @@ nav {
     border: none;
 }
 
+/* Estilo geral */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f1f5;
+    color: #333;
+    min-height: 100%; /* Garante que a altura mínima da página ocupe toda a tela */
+    display: flex; /* Ativa o layout flex */
+    flex-direction: column; /* Coloca os elementos um embaixo do outro */
+}
+
 /* Rodapé */
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #27478b;
+    padding: 10px; /* Tamanho reduzido do rodapé */
+    background-color: #27478b; /* Cor de fundo */
     color: #fff;
+    font-size: 0.8rem; /* Fonte ligeiramente reduzida */
     margin-top: 20px;
-    font-size: 0.9rem;
+    flex-shrink: 0; /* Impede que o rodapé encolha */
+    width: 100%; /* Garante que o rodapé ocupe toda a largura */
 }
 
+/* Barra de contatos */
 .contact-bar {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Ajuste no espaçamento entre ícones */
 }
 
 .contact-bar a {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.3rem; /* Tamanho ajustado dos ícones */
     text-decoration: none;
     transition: color 0.3s, transform 0.2s;
 }
 
 .contact-bar a:hover {
-    color: #e8f1ff;
-    transform: scale(1.2);
+    color: #e8f1ff; /* Cor de destaque ao passar o mouse */
+    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
 }
+
+/* Ajuste final para garantir que o rodapé fique no fundo */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o conteúdo ocupe a altura completa da tela */
+    margin: 0; /* Remove margens padrão */
+}
+
+main {
+    flex-grow: 1; /* Faz com que a área principal ocupe todo o espaço disponível */
+}
+
+
+/* Ajusta a área principal para o conteúdo */
+main {
+    flex-grow: 1; /* Faz com que a área principal ocupe todo o espaço disponível */
+}
+
 
 /* Ajustes para garantir responsividade em todos os tamanhos de ecrã */
 @media (max-width: 480px) {

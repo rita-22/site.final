@@ -104,31 +104,65 @@ nav {
     border-radius: 8px;
 }
 
+/* Contêiner da introdução com imagem e texto */
+.about-container {
+    display: flex; /* Organiza os elementos em linha */
+    align-items: center; /* Alinha verticalmente ao centro */
+    justify-content: flex-start; /* Alinha os elementos à esquerda */
+    gap: 20px; /* Espaçamento entre a imagem e o texto */
+    text-align: left; /* Texto alinhado à esquerda */
+}
+
+/* Estilo da fotografia */
+.profile-pic {
+    width: 150px; /* Largura da imagem */
+    height: 150px; /* Altura da imagem */
+    border-radius: 50%; /* Torna a imagem redonda */
+    object-fit: cover; /* Ajusta a imagem ao tamanho definido sem distorção */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra subtil */
+}
+
+
 /* Rodapé */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 10px; /* Tamanho reduzido do rodapé */
     background-color: #6a1b9a; /* Roxo escuro */
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 0.8rem; /* Fonte ligeiramente reduzida */
+    margin-top: 20px;
+    flex-shrink: 0; /* Impede que o rodapé encolha */
+    width: 100%; /* Garante que o rodapé ocupe toda a largura */
 }
 
+/* Barra de contatos */
 .contact-bar {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Ajuste no espaçamento entre ícones */
 }
 
 .contact-bar a {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.3rem; /* Tamanho ajustado dos ícones */
     text-decoration: none;
     transition: color 0.3s, transform 0.2s;
 }
 
 .contact-bar a:hover {
-    color: rgba(193, 130, 245, 0.521); /* Roxo muito suave ao passar o mouse */
-    transform: scale(1.2);
+    color: rgba(193, 130, 245, 0.521); /* Roxo suave ao passar o mouse */
+    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
 }
 
+/* Ajuste final para garantir que o rodapé fique no fundo */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o conteúdo ocupe a altura completa da tela */
+    margin: 0; /* Remove margens padrão */
+}
+
+main {
+    flex-grow: 1; /* Faz com que a área principal ocupe todo o espaço disponível */
+}
