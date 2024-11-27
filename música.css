@@ -2,6 +2,9 @@
 html, body {
     margin: 0;
     padding: 0;
+    width: 100%; /* Garante que a largura ocupe 100% da tela */
+    height: 100%; /* Garante que a altura ocupe 100% da tela */
+    overflow-x: hidden; /* Impede o deslizamento horizontal */
     font-family: 'Poppins', sans-serif;
     background-color: rgba(193, 130, 245, 0.521); /* Cor roxa suave */
     color: #4b0082; /* Roxo escuro */
@@ -78,50 +81,41 @@ nav {
     border-radius: 10px;
     margin: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Aumenta a largura (80% do contêiner) */
+    height: 400px; /* Define uma altura maior */
+    margin: 20px auto; /* Centraliza horizontalmente */
 }
 
 .content h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
     color: #8e24aa; /* Roxo mais intenso */
 }
 
 .content p {
-    font-size: 1.2rem;
-    color: #6a1b9a;
+    color: black;
+}
+.content div2 {
+    font-size: 1.5rem;
+    color: #8e24aa;
+    position: left;
+}
+.content div3 {
+    color: black;
+    position: left;
+}
+.content div4 {
+    color: #8e24aa;
+    font-size: 1.5rem;
+}
+.content div5 {
+    color: black;
 }
 
-/* Imagem da Olívia */
-.container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+.spotify-player {
+    margin: 600px;
+    position: center;
 }
-
-.foto {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* Contêiner da introdução com imagem e texto */
-.about-container {
-    display: flex; /* Organiza os elementos em linha */
-    align-items: center; /* Alinha verticalmente ao centro */
-    justify-content: flex-start; /* Alinha os elementos à esquerda */
-    gap: 20px; /* Espaçamento entre a imagem e o texto */
-    text-align: left; /* Texto alinhado à esquerda */
-}
-
-/* Estilo da fotografia */
-.profile-pic {
-    width: 150px; /* Largura da imagem */
-    height: 150px; /* Altura da imagem */
-    border-radius: 50%; /* Torna a imagem redonda */
-    object-fit: cover; /* Ajusta a imagem ao tamanho definido sem distorção */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra subtil */
-}
-
 
 /* Rodapé */
 footer {

@@ -2,6 +2,9 @@
 html, body {
     margin: 0;
     padding: 0;
+    width: 100%; /* Garante que a largura ocupe 100% da tela */
+    height: 100%; /* Garante que a altura ocupe 100% da tela */
+    overflow-x: hidden; /* Impede o deslizamento horizontal */
     font-family: 'Arial', sans-serif;
     background-color: #efe8e0; /* Bege claro */
     color: #5c4033; /* Castanho escuro */

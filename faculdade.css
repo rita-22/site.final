@@ -2,6 +2,9 @@
 html, body {
     margin: 0;
     padding: 0;
+    width: 100%; /* Garante que a largura ocupe 100% da tela */
+    height: 100%; /* Garante que a altura ocupe 100% da tela */
+    overflow-x: hidden; /* Impede o deslizamento horizontal */
     font-family: 'Arial', sans-serif;
     background-color: #eaf2e3; /* Verde pastel claro */
     color: #4f6f52; /* Verde escuro para o texto */
