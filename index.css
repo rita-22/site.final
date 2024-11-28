@@ -110,7 +110,7 @@ nav {
     background-color: #ffe6ea;
     border-radius: 10px;
     margin: 20px auto;
-    max-width: 800px;
+    max-width: 1200px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -122,7 +122,11 @@ nav {
 
 .intro p {
     font-size: 1rem;
-    color: #555;
+    color: #2f2d2d; /*cor do texto*/
+}
+
+.halo {
+    text-align: center;
 }
 
 /* Contêiner principal para a introdução */
@@ -139,12 +143,12 @@ nav {
 /* Caixa de texto sobre mim */
 .caixa-sobre-mim {
     background-color: #ffe6ea; /* Fundo com uma cor suave */
-    padding: 20px; /* Espaçamento interno */
+    padding: 50px; /* Espaçamento interno */
     border-radius: 10px; /* Cantos arredondados */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra subtil */
     max-width: 800px; /* Limita a largura da caixa */
     text-align: justify; /* Texto justificado */
-    margin-left: 100px; /* Move a caixa ainda mais para a direita */
+    margin-left: 50px; /* Move a caixa ainda mais para a direita */
     position: relative;
     height: 250px;
 }
@@ -153,10 +157,11 @@ nav {
 /* Estilo da imagem */
 .profile-pic {
     width: 1000px; /* Largura aumentada */
-    height: 250px; /* Altura ajustada para manter um formato vertical */
+    height: 350px; /* Altura ajustada para manter um formato vertical */
     border-radius: 15px; /* Bordas arredondadas */
     object-fit: cover; /* Garante que a imagem preenche o espaço sem distorção */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra subtil */
+    margin-left: 50px; /* Define uma margem de 50px à esquerda */
 }
 
 @media (max-width: 768px) {

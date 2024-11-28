@@ -15,8 +15,11 @@ html, body {
 /* Cabeçalho */
 header {
     background-color: #a3c9a8; /* Verde pastel médio */
-    padding: 1rem 2rem;
-    border-bottom: 2px solid #8ab78e; /* Verde mais escuro */
+    padding: 10px 480px;
+    border: 3px solid #517554; /* Verde mais escuro */
+    max-width: 1200px; /* Largura máxima do cabeçalho */
+    margin: 0px auto; /* Centraliza horizontalmente */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
 }
 
 nav {

@@ -15,8 +15,11 @@ html, body {
 /* Cabeçalho */
 header {
     background: linear-gradient(45deg, #6a93d4, #3b6ebf); /* Gradiente */
-    padding: 10px 20px;
-    border-bottom: 2px solid #27478b;
+    padding: 10px 480px;
+    border: 3px solid #27478b;
+    max-width: 1200px; /* Largura máxima do cabeçalho */
+    margin: 0px auto; /* Centraliza horizontalmente */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
 }
 
 nav {
@@ -84,7 +87,7 @@ nav {
 /* Conteúdo principal */
 .content {
     text-align: center;
-    padding: 50px 20px;
+    padding: 30px 20px;
     background-color: #c8e0c7; /* Verde pastel claro */
     border-radius: 10px;
     margin: 20px auto;
@@ -92,16 +95,30 @@ nav {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.content h1 {
-    font-size: 2.5rem;
+h1 {
+    font-size: 2rem;
     margin-bottom: 20px;
     color: #3b6ebf;
+    text-align: center;
     
 }
-
+.intro {
+    background-color: rgb(219, 219, 237); /* Fundo com uma cor suave */
+    padding-top: 5px; /* Espaçamento interno */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra subtil */
+    max-width: 1200px; /* Limita a largura da caixa */
+    text-align: justify; /* Texto justificado */
+    margin-left: auto; /* Move a caixa ainda mais para a direita */
+    margin-right: auto; /* Move a caixa ainda mais para a direita */
+    position: relative;
+}
+.apresentação {
+    text-align: center;
+}
 .content p {
     font-size: 1.2rem;
-    color: #4f6f52;
+    color: #2f2d2d; /*cor do texto*/
     
 }
 
@@ -112,10 +129,14 @@ nav {
     height: 0;
     padding-bottom: 56.25%; /* Proporção 16:9 */
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 1090px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container2 {
+    margin-bottom: 30px;
 }
 
 .video-container iframe {
@@ -126,6 +147,7 @@ nav {
     height: 100%;
     border: none;
 }
+
 
 /* Estilo geral */
 html, body {

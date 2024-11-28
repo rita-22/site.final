@@ -13,8 +13,11 @@ html, body {
 /* Cabeçalho */
 header {
     background-color: #9b59b6; /* Roxo médio */
-    padding: 10px 20px;
-    border-bottom: 2px solid #6a1b9a; /* Roxo mais escuro */
+    padding: 10px 480px;
+    border: 3px solid #6a1b9a; /* Roxo mais escuro */
+    max-width: 1200px; /* Largura máxima do cabeçalho */
+    margin: 0px auto; /* Centraliza horizontalmente */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
 }
 
 nav {
@@ -113,8 +116,15 @@ nav {
 }
 
 .spotify-player {
-    margin: 600px;
-    position: center;
+
+    width: 300px;
+
+}
+
+
+.caixa-lado {
+    display: flex;
+    flex-direction: row;
 }
 
 /* Rodapé */

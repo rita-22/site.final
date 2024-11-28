@@ -13,8 +13,10 @@ html, body {
 /* Cabeçalho */
 header {
     background-color: #d2b48c; /* Bege médio */
-    padding: 10px 20px;
-    border-bottom: 2px solid #8b4513; /* Castanho escuro */
+    padding: 10px 480px;
+    border: 3px solid #8b4513; /* Castanho escuro */
+    margin: 0px auto; /* Centraliza horizontalmente */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
 }
 
 nav {
