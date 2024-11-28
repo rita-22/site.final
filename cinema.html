@@ -27,49 +27,33 @@
             <h1>The Greatest Showman</h1>
             <div class="coluna centro">
                 <p>O meu filme favorito, que se ainda não viste não sei do que estás à espera!</p>
-                <p>The Greatest Showman conta a história de P.T. Barnum, um homem que cresce em dificuldades
-                e sonha em dar uma vida melhor à sua família. Ao enfrentar o fracasso e o preconceito, Barnum 
-                cria um espetáculo único, reunindo pessoas com características extraordinárias.
-                Ao longo do filme, Barnum enfrenta desafios pessoais, incluindo a relação com a sua esposa, 
-                Charity, e o dilema de equilibrar o seu sucesso com os seus valores. <br> O filme explora temas como 
-                a busca pela aceitação, o poder dos sonhos e o amor próprio, enquanto Barnum luta para encontrar 
-                o equilíbrio entre a fama e a felicidade verdadeira.</p></br>
+                <p>The Greatest Showman conta a história de P.T. Barnum...</p>
                 <p>Vê este trailer e perceberás o que estás a perder ;)</p>
 
-                <!-- Inserir o vídeo dentro de um wrapper responsivo -->
                 <div class="video-wrapper">
                     <iframe src="https://www.youtube.com/embed/r5R6CVp_JzU?si=4GLjjJ9hnPjcxh3W" 
                             frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen></iframe>
                 </div>
             </div>
+
+            <!-- Secção de comentários -->
             <section class="comentarios">
-                <div id="interruptor-visual"></div>
-    
-</div>
                 <h2>Deixa o teu comentário</h2>
-                
-                <form id="form-comentarios" action="#" method="POST">
-                    <textarea name="comentario" id="comentario" rows="4" placeholder="Escreve o teu comentário aqui..."></textarea>
-                    
-                     <!-- Avaliação por estrelas -->
-        <div class="estrelas">
-            <span class="estrela" data-value="1">★</span>
-            <span class="estrela" data-value="2">★</span>
-            <span class="estrela" data-value="3">★</span>
-            <span class="estrela" data-value="4">★</span>
-            <span class="estrela" data-value="5">★</span>
-        </div>
-        
-        
-        
-        <script src="cinema.js"></script>
-    </div>
-                    
-                    <button type="submit">Enviar Comentário</button>
+                <form id="form-comentarios">
+                    <textarea id="comentario" rows="4" placeholder="Escreve o teu comentário aqui..."></textarea>
+                    <div class="estrelas">
+                        <span class="estrela" data-value="1">★</span>
+                        <span class="estrela" data-value="2">★</span>
+                        <span class="estrela" data-value="3">★</span>
+                        <span class="estrela" data-value="4">★</span>
+                        <span class="estrela" data-value="5">★</span>
+                    </div>
+                    <button id="enviar-comentario" type="button">Enviar Comentário</button>
                 </form>
-            </section>            
-        </section>
+                <div id="lista-comentarios"></div>
+            </section>
+            
     </main>
     <footer>
         <div class="contact-bar">
@@ -88,6 +72,8 @@
         </div>
         <p>Rita Martins, feito com ❤</p>
     </footer>
+    <script src="cinema.js"></script>
 </body>
 </html>
+
 
