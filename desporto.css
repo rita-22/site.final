@@ -14,11 +14,11 @@ html, body {
 
 /* Cabeçalho */
 header {
-    background: linear-gradient(45deg, #6a93d4, #3b6ebf); /* Gradiente */
-    padding: 10px 480px;
-    border: 3px solid #27478b;
-    max-width: 1200px; /* Largura máxima do cabeçalho */
-    margin: 0px auto; /* Centraliza horizontalmente */
+    background-color:  #27478b; /* Gradiente */
+    padding: 10px 0px;
+    border: 3px solid #0a245d;
+    width: 100%; /* Garante que o cabeçalho ocupe 100% da largura */
+    margin: 0; /* Remove margem extra */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
 }
 

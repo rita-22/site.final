@@ -2,23 +2,22 @@
 html, body {
     margin: 0;
     padding: 0;
-    width: 100%; /* Garante que a largura ocupe 100% da tela */
-    height: 100%; /* Garante que a altura ocupe 100% da tela */
-    overflow-x: hidden; /* Impede o deslizamento horizontal */
     font-family: 'Poppins', sans-serif;
-    background-color: rgba(193, 130, 245, 0.521); /* Cor roxa suave */
+    background-color: rgba(193, 130, 245, 0.521); /* Roxo pastel */
     color: #4b0082; /* Roxo escuro */
 }
 
 /* Cabeçalho */
 header {
     background-color: #9b59b6; /* Roxo médio */
-    padding: 10px 480px;
+    padding: 10px 20px; /* Ajusta o preenchimento */
     border: 3px solid #6a1b9a; /* Roxo mais escuro */
-    max-width: 1200px; /* Largura máxima do cabeçalho */
-    margin: 0px auto; /* Centraliza horizontalmente */
+    width: 100%; /* Ocupa toda a largura disponível */
+    box-sizing: border-box; /* Inclui o padding na largura total */
+    margin: 0; /* Remove margens para evitar deslocamentos */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
 }
+
 
 nav {
     display: flex;
@@ -27,7 +26,6 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
 }
-
 
 .menu {
     list-style: none;
@@ -78,95 +76,111 @@ nav {
 
 /* Conteúdo principal */
 .content {
-    text-align: center;
-    padding: 50px 20px;
+    padding: 20px;
     background-color: #f3e5f5; /* Roxo muito suave */
     border-radius: 10px;
-    margin: 20px;
+    margin: 20px auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 80%; /* Aumenta a largura (80% do contêiner) */
-    height: 400px; /* Define uma altura maior */
-    margin: 20px auto; /* Centraliza horizontalmente */
+    width: 90%; /* Adapta-se melhor ao ecrã */
+    max-width: 1200px;
 }
 
 .content h1 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    text-align: center;
     color: #8e24aa; /* Roxo mais intenso */
+    margin-bottom: 30px;
 }
 
-.content p {
-    color: black;
-}
-.content div2 {
-    font-size: 1.5rem;
-    color: #8e24aa;
-    position: left;
-}
-.content div3 {
-    color: black;
-    position: left;
-}
-.content div4 {
-    color: #8e24aa;
-    font-size: 1.5rem;
-}
-.content div5 {
-    color: black;
-}
-
-.spotify-player {
-
-    width: 300px;
-
-}
-
-
-.caixa-lado {
+/* Seções de texto e imagem */
+.info-box {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+    background-color: rgba(82, 9, 82, 0.534); /* Fundo roxo suave */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Garante que ocupe toda a largura disponível */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+.info-box .text {
+    flex: 1;
+    text-align: left;
+}
+
+.info-box .text h2 {
+    font-size: 1.5rem;
+    color: #8e24aa;
+    margin-bottom: 10px;
+}
+
+.info-box .text p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.info-box .image {
+    flex: 1;
+    text-align: center;
+}
+
+.info-box .image img, 
+.info-box .image iframe {
+    max-width: 100%; /* Ocupe toda a largura no ecrã pequeno */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .info-box {
+        flex-direction: column; /* Empilha os elementos verticalmente */
+        align-items: center;
+        text-align: center;
+    }
+
+    .info-box .image img, 
+    .info-box .image iframe {
+        max-width: 90%; /* Ajusta para telas menores */
+    }
+
+    .info-box .text {
+        text-align: center; /* Centraliza o texto em dispositivos pequenos */
+    }
+
+    .content {
+        padding: 10px; /* Ajusta o preenchimento para dispositivos menores */
+    }
 }
 
 /* Rodapé */
 footer {
     text-align: center;
-    padding: 10px; /* Tamanho reduzido do rodapé */
+    padding: 10px;
     background-color: #6a1b9a; /* Roxo escuro */
     color: #fff;
-    font-size: 0.8rem; /* Fonte ligeiramente reduzida */
-    margin-top: 20px;
-    flex-shrink: 0; /* Impede que o rodapé encolha */
-    width: 100%; /* Garante que o rodapé ocupe toda a largura */
+    font-size: 0.8rem;
 }
 
-/* Barra de contatos */
 .contact-bar {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 5px; /* Ajuste no espaçamento entre ícones */
+    margin-bottom: 5px;
 }
 
 .contact-bar a {
     color: #fff;
-    font-size: 1.3rem; /* Tamanho ajustado dos ícones */
-    text-decoration: none;
-    transition: color 0.3s, transform 0.2s;
+    font-size: 1.3rem;
+    transition: transform 0.2s;
 }
 
 .contact-bar a:hover {
-    color: rgba(193, 130, 245, 0.521); /* Roxo suave ao passar o mouse */
-    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
+    transform: scale(1.2);
 }
 
-/* Ajuste final para garantir que o rodapé fique no fundo */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Garante que o conteúdo ocupe a altura completa da tela */
-    margin: 0; /* Remove margens padrão */
-}
-
-main {
-    flex-grow: 1; /* Faz com que a área principal ocupe todo o espaço disponível */
-}
