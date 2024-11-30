@@ -13,9 +13,10 @@ html, body {
 /* Cabeçalho */
 header {
     background-color: #d2b48c; /* Bege médio */
-    padding: 10px 480px;
+    padding: 10px 0;
     border: 3px solid #8b4513; /* Castanho escuro */
     margin: 0px auto; /* Centraliza horizontalmente */
+    width: 100%; /* Garante que o cabeçalho ocupe 100% da largura */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
 }
 
@@ -51,26 +52,34 @@ nav {
 
 .menu-icon {
     font-size: 2rem;
-    color: #5c4033;
+    color: #fff;
     cursor: pointer;
     display: none;
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Menu fica em coluna */
+    }
+
     .menu {
         flex-direction: column;
-        display: none;
+        display: none; /* Menu começa escondido */
         gap: 10px;
+        align-items: center; /* Centraliza os itens do menu */
+        width: 100%;
     }
 
     .menu-toggle:checked + .menu-icon + .menu {
-        display: flex;
+        display: flex; /* Exibe o menu quando o toggle for ativado */
     }
 
     .menu-icon {
-        display: block;
+        display: block; /* Exibe o ícone do menu */
     }
 }
+
 
 /* Conteúdo principal */
 .content {
@@ -103,9 +112,10 @@ nav {
     width: 80%; /* Agora 80% da largura da tela */
     max-width: 1200px; /* Limita o tamanho máximo do vídeo */
     margin: 0 auto; /* Centraliza o vídeo */
-    height: 450px; /* Definimos a altura fixa */
+    padding-bottom: 56.25%; /* Proporção de 16:9 (altura 56.25% da largura) */
     background-color: #000; /* Fundo preto para o vídeo */
     border-radius: 15px; /* Bordas arredondadas */
+    overflow: hidden; /* Garante que não saia do contorno */
 }
 
 .video-wrapper iframe {
@@ -113,15 +123,15 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* Mantém a altura fixa */
+    height: 100%; /* Mantém a proporção de 16:9 */
     border-radius: 15px; /* Bordas arredondadas no vídeo também */
 }
 
+/* Ajustes para dispositivos móveis */
 @media (max-width: 600px) {
     .video-wrapper {
         width: 100%; /* O vídeo ocupa toda a largura em ecrãs pequenos */
-        height: auto; /* A altura ajusta-se à largura */
-        border-radius: 10px; /* Bordas arredondadas menores */
+        padding-bottom: 56.25%; /* Mantém a proporção 16:9 */
     }
 }
 
@@ -139,7 +149,7 @@ nav {
 .comentarios h2 {
     text-align: center;
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 #comentario {

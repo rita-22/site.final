@@ -8,25 +8,23 @@ html, body {
     font-family: 'Arial', sans-serif;
     background-color: #eaf2e3; /* Verde pastel claro */
     color: #4f6f52; /* Verde escuro para o texto */
-    box-sizing: border-box;
-    width: 100%;
 }
 
 /* Cabeçalho */
 header {
     background-color: #a3c9a8; /* Verde pastel médio */
-    padding: 10px 480px;
+    padding: 10px 0;
     border: 3px solid #517554; /* Verde mais escuro */
-    max-width: 1200px; /* Largura máxima do cabeçalho */
+    width: 100%;
     margin: 0px auto; /* Centraliza horizontalmente */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
 }
 
+/*Navegação*/
 nav {
     display: flex;
     justify-content: center;  /* Centraliza os itens de navegação */
     align-items: center;
-    width: 100%;  /* Garante que o nav ocupe toda a largura disponível */
 }
 
 .menu {
@@ -34,13 +32,15 @@ nav {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 1.5rem;
+    gap: 20px;
 }
 
+/*Links do menu*/
 .menu li a {
     text-decoration: none;
     color: #4f6f52; /* Verde escuro */
     font-weight: bold;
+    font-size: 1rem;
     transition: color 0.3s;
 }
 
@@ -60,27 +60,29 @@ nav {
     display: none;
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
-    .menu {
-        flex-direction: column;
-        display: none;
-        gap: 1rem;
-        width: 100%;
-        text-align: center;  /* Centraliza os itens de menu em telas pequenas */
+    nav {
+        flex-direction: column; /* Menu fica em coluna */
     }
 
-    .menu li a {
-        padding: 0.5rem 0;
+    .menu {
+        flex-direction: column;
+        display: none; /* Menu começa escondido */
+        gap: 10px;
+        align-items: center; /* Centraliza os itens do menu */
+        width: 100%;
     }
 
     .menu-toggle:checked + .menu-icon + .menu {
-        display: flex;
+        display: flex; /* Exibe o menu quando o toggle for ativado */
     }
 
     .menu-icon {
-        display: block;
+        display: block; /* Exibe o ícone do menu */
     }
 }
+
 
 /* Conteúdo principal */
 .content {

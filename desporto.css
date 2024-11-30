@@ -2,14 +2,12 @@
 html, body {
     margin: 0;
     padding: 0;
-    width: 100%; /* Garante que a largura ocupe 100% da tela */
-    height: 100%; /* Garante que a altura ocupe 100% da tela */
-    overflow-x: hidden; /* Impede o deslizamento horizontal */
     font-family: 'Arial', sans-serif;
-    background-color: #eaf2e3; /* Verde pastel claro */
-    color: #4f6f52; /* Verde escuro para o texto */
-    box-sizing: border-box;
-    width: 100%;
+    background-color: #f9f1f5;
+    color: #333;
+    min-height: 100%; /* Garante que a altura mínima da página ocupe toda a tela */
+    display: flex; /* Ativa o layout flex */
+    flex-direction: column; /* Coloca os elementos um embaixo do outro */
 }
 
 /* Cabeçalho */
@@ -31,6 +29,7 @@ nav {
     width: 100%;
 }
 
+/* Lista de links */
 .menu {
     list-style: none;
     margin: 0;
@@ -66,21 +65,23 @@ nav {
 /* Responsividade */
 @media (max-width: 768px) {
     nav {
-        flex-direction: column;
+        flex-direction: column; /* Menu fica em coluna */
     }
 
     .menu {
         flex-direction: column;
-        display: none;
+        display: none; /* Menu começa escondido */
         gap: 10px;
+        align-items: center; /* Centraliza os itens do menu */
+        width: 100%;
     }
 
     .menu-toggle:checked + .menu-icon + .menu {
-        display: flex;
+        display: flex; /* Exibe o menu quando o toggle for ativado */
     }
 
     .menu-icon {
-        display: block;
+        display: block; /* Exibe o ícone do menu */
     }
 }
 
@@ -100,26 +101,29 @@ h1 {
     margin-bottom: 20px;
     color: #3b6ebf;
     text-align: center;
-    
 }
+
 .intro {
     background-color: rgb(219, 219, 237); /* Fundo com uma cor suave */
-    padding-top: 5px; /* Espaçamento interno */
-    border-radius: 10px; /* Cantos arredondados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra subtil */
-    max-width: 1200px; /* Limita a largura da caixa */
-    text-align: justify; /* Texto justificado */
-    margin-left: auto; /* Move a caixa ainda mais para a direita */
-    margin-right: auto; /* Move a caixa ainda mais para a direita */
+    padding-top: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
 }
+
 .apresentação {
     text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
 }
+
 .content p {
     font-size: 1.2rem;
-    color: #2f2d2d; /*cor do texto*/
-    
+    color: #2f2d2d;
 }
 
 /* Vídeo */
@@ -148,29 +152,16 @@ h1 {
     border: none;
 }
 
-
-/* Estilo geral */
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f1f5;
-    color: #333;
-    min-height: 100%; /* Garante que a altura mínima da página ocupe toda a tela */
-    display: flex; /* Ativa o layout flex */
-    flex-direction: column; /* Coloca os elementos um embaixo do outro */
-}
-
 /* Rodapé */
 footer {
     text-align: center;
-    padding: 10px; /* Tamanho reduzido do rodapé */
-    background-color: #27478b; /* Cor de fundo */
+    padding: 10px;
+    background-color: #27478b;
     color: #fff;
-    font-size: 0.8rem; /* Fonte ligeiramente reduzida */
+    font-size: 0.8rem;
     margin-top: 20px;
-    flex-shrink: 0; /* Impede que o rodapé encolha */
-    width: 100%; /* Garante que o rodapé ocupe toda a largura */
+    flex-shrink: 0;
+    width: 100%;
 }
 
 /* Barra de contatos */
@@ -178,39 +169,32 @@ footer {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 5px; /* Ajuste no espaçamento entre ícones */
+    margin-bottom: 5px;
 }
 
 .contact-bar a {
     color: #fff;
-    font-size: 1.3rem; /* Tamanho ajustado dos ícones */
+    font-size: 1.3rem;
     text-decoration: none;
     transition: color 0.3s, transform 0.2s;
 }
 
 .contact-bar a:hover {
-    color: #e8f1ff; /* Cor de destaque ao passar o mouse */
-    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
+    color: #e8f1ff;
+    transform: scale(1.2);
 }
 
 /* Ajuste final para garantir que o rodapé fique no fundo */
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Garante que o conteúdo ocupe a altura completa da tela */
-    margin: 0; /* Remove margens padrão */
+    min-height: 100vh;
+    margin: 0;
 }
 
 main {
-    flex-grow: 1; /* Faz com que a área principal ocupe todo o espaço disponível */
+    flex-grow: 1;
 }
-
-
-/* Ajusta a área principal para o conteúdo */
-main {
-    flex-grow: 1; /* Faz com que a área principal ocupe todo o espaço disponível */
-}
-
 
 /* Ajustes para garantir responsividade em todos os tamanhos de ecrã */
 @media (max-width: 480px) {
@@ -230,5 +214,6 @@ main {
         font-size: 0.8rem;
     }
 }
+
 
 

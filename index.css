@@ -61,24 +61,26 @@ nav {
     display: none;
 }
 
-/* Responsividade para navegação */
+/* Responsividade */
 @media (max-width: 768px) {
     nav {
-        flex-direction: column;
+        flex-direction: column; /* Menu fica em coluna */
     }
 
     .menu {
         flex-direction: column;
-        display: none;
+        display: none; /* Menu começa escondido */
         gap: 10px;
+        align-items: center; /* Centraliza os itens do menu */
+        width: 100%;
     }
 
     .menu-toggle:checked + .menu-icon + .menu {
-        display: flex;
+        display: flex; /* Exibe o menu quando o toggle for ativado */
     }
 
     .menu-icon {
-        display: block;
+        display: block; /* Exibe o ícone do menu */
     }
 }
 
