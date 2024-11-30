@@ -9,9 +9,9 @@ html, body {
 
 /* Cabeçalho */
 header {
-    background-color: #9b59b6; /* Roxo médio */
+    background-color: #6a1b9a; /* Roxo médio */
     padding: 10px 20px; /* Ajusta o preenchimento */
-    border: 3px solid #6a1b9a; /* Roxo mais escuro */
+    border: 3px solid  #4b0082; /* Roxo mais escuro */
     width: 100%; /* Ocupa toda a largura disponível */
     box-sizing: border-box; /* Inclui o padding na largura total */
     margin: 0; /* Remove margens para evitar deslocamentos */
@@ -106,7 +106,7 @@ nav {
     justify-content: space-between;
     gap: 20px;
     margin-bottom: 30px;
-    background-color: rgba(82, 9, 82, 0.534); /* Fundo roxo suave */
+    background-color: rgba(193, 130, 245, 0.521); /* Fundo roxo suave */
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -191,3 +191,37 @@ footer {
     transform: scale(1.2);
 }
 
+/* Adicionar estilos para os retângulos da galeria */
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.gallery-item {
+    background-color: #9b59b6; /* Roxo */
+    border-radius: 10px;
+    overflow: hidden; /* Garante que as imagens se ajustem ao retângulo */
+    width: 23%; /* Tamanho fixo para os retângulos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%; /* Faz as imagens ocuparem todo o espaço do retângulo */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove qualquer espaço abaixo da imagem */
+}
+
+/* Responsividade para a galeria */
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column; /* Coloca as imagens em coluna em telas menores */
+        align-items: center;
+    }
+
+    .gallery-item {
+        width: 90%; /* Ajusta a largura para telas menores */
+        margin-bottom: 20px;
+    }
+}
