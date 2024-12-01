@@ -150,12 +150,20 @@ nav {
 }
 
 .tab-pane img {
-    width: 100%;              /* Ocupa toda a largura disponível */
-    max-width: 200px;         /* Limita o tamanho máximo para ecrãs maiores */
-    height: auto;             /* Mantém a proporção original da imagem */
+    max-width: 390px;         /* Define uma largura máxima maior */
+    width: 100%;              /* A largura será ajustada ao container */
+    height: auto;             /* Mantém as proporções originais */
     border-radius: 8px;       /* Bordas arredondadas */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para melhorar o aspeto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin: 0;                /* Remove margens extras */
+   
 }
+@media (max-width: 768px) {
+    .tab-pane img {
+        max-width: 90%; /* Permite que as imagens ocupem quase toda a largura do ecrã */
+    }
+}
+
 
 .tab-pane.active {
     display: flex;
