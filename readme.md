@@ -1,8 +1,8 @@
-Descrição do Projeto
-    O objetivo deste projeto foi desenvolver uma página web funcional, atrativa e responsiva, permitindo explorar conceitos básicos de HTML, CSS e JavaScript. O site incia com uma pequena apresentação minha, explorando de seguida os meus interesses e projetos realizados.
+ - Descrição do Projeto - 
+O objetivo deste projeto foi desenvolver uma página web funcional, atrativa e responsiva, permitindo explorar conceitos básicos de HTML, CSS e JavaScript. O site incia com uma pequena apresentação minha, explorando de seguida os meus interesses e projetos realizados.
 
 
-Estrutura do Projeto
+ - Estrutura do Projeto - 
 O site está organizado em 5 páginas:
 
 1. Início:
@@ -22,7 +22,7 @@ Esta página é dedicada a partilhar a minha paixão pela música e pela carreir
 5. Uni:
 Foca a minha experiência universitária, com detalhes sobre o curso e a partilha de trabalhos fotográficos realizados na cadeira de práticas fotográficas. Através de abas interativas (obturador, lightpainting, sentimentos, rostos p.b), os visitantes podem visualizar diferentes conjuntos de fotos que representam as temáticas que trabalho nas minhas práticas. Utilizando JavaScript tornei esta exploração mais interativa, visto que é possível alternar entre as imagens das diferentes categorias de fotos, fechando e abrindo as abas das fotografias.
 
-Funcionalidades
+ - Funcionalidades -
 1. Design Responsivo
 O site adapta-se a diferentes dispositivos (telemóveis, tablets e desktops) com o uso de media queries no CSS, garantindo uma boa experiência de navegação em qualquer ecrã.
 
