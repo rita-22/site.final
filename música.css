@@ -192,38 +192,44 @@ footer {
     transform: scale(1.2);
 }
 
-
-/* Adicionar estilos para os retângulos da galeria */
+/* Estilo da galeria */
 .gallery {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas em ecrãs grandes */
+    gap: 20px; /* Espaçamento entre os itens */
     margin-top: 30px;
+    align-items: stretch; /* Garante que todos os itens tenham a mesma altura */
 }
 
+/* Estilo dos itens da galeria */
 .gallery-item {
-    background-color: #9b59b6; /* Roxo */
-    border-radius: 10px;
-    overflow: hidden; /* Garante que as imagens se ajustem ao retângulo */
-    width: 23%; /* Tamanho fixo para os retângulos */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px; /* Bordas arredondadas para todos os itens */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas */
+    position: relative; /* Necessário para o ajuste dos iframes */
 }
 
+/* Estilo para o iframe (vídeos) */
+.gallery-item iframe {
+    border: none; /* Remove a borda do iframe */
+    width: 100%;
+    height: 100%;
+    position: absolute; /* Faz o iframe preencher a caixa pai */
+    top: 0;
+    left: 0;
+    border-radius: 0; /* REMOVE o border-radius direto no iframe */
+}
+
+/* Estilo para as imagens */
 .gallery-item img {
-    width: 100%; /* Faz as imagens ocuparem todo o espaço do retângulo */
-    height: 100%; /* Mantém a proporção da imagem */
-    display: block; /* Remove qualquer espaço abaixo da imagem */
+    width: 100%; /* Largura 100% */
+    height: 100%; /* Altura 100% */
+    object-fit: cover; /* Garante que a imagem preencha a área sem distorcer */
+    border-radius: 20px; /* Bordas arredondadas para as imagens */
 }
 
 /* Responsividade para a galeria */
 @media (max-width: 768px) {
     .gallery {
-        flex-direction: column; /* Coloca as imagens em coluna em telas menores */
-        align-items: center;
-    }
-
-    .gallery-item {
-        width: 90%; /* Ajusta a largura para telas menores */
-        margin-bottom: 20px;
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em ecrãs pequenos */
     }
 }
