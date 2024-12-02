@@ -88,7 +88,7 @@ nav {
 /* Seção de introdução */
 .intro {
     text-align: center;
-    padding: 50px 20px;
+    padding: 10px 20px;
     background-color: #a3c9a8;
     border-radius: 10px;
     margin: 20px auto;
@@ -96,6 +96,16 @@ nav {
     max-width: 1200px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .intro{
+        padding: 10px; /* Ajusta o preenchimento para dispositivos menores */
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    }
 
 .intro h1 {
     font-size: 2.5rem;

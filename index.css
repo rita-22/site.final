@@ -87,7 +87,7 @@ nav {
 /* Seção de introdução */
 .intro {
     text-align: center;
-    padding: 50px 20px;
+    padding: 10px 10px;
     background-color: #ffe6ea;
     border-radius: 10px;
     margin: 20px auto;
@@ -125,12 +125,14 @@ nav {
 /* Caixa de texto sobre mim */
 .caixa-sobre-mim {
     background-color: #ffe6ea;
-    padding: 50px;
+    padding-top: 10px; 
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 50px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 800px;
     text-align: justify;
-    margin-left: 50px;
     position: relative;
     height: 250px;
 }
@@ -157,6 +159,7 @@ nav {
         max-width: 90%;
         margin: 0px; /* Reduz o espaço vertical em dispositivos menores */
         text-align: center;
+        height: 300px;
     }
 
     .profile-pic {

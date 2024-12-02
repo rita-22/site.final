@@ -10,7 +10,7 @@ html, body {
 /* Cabeçalho */
 header {
     background-color: #6a1b9a; /* Roxo médio */
-    padding: 10px 20px; /* Ajusta o preenchimento */
+    padding: 10px 10px; /* Ajusta o preenchimento */
     border: 3px solid  #4b0082; /* Roxo mais escuro */
     width: 100%; /* Ocupa toda a largura disponível */
     box-sizing: border-box; /* Inclui o padding na largura total */
@@ -85,7 +85,7 @@ nav {
 /* Conteúdo principal */
 .content {
     text-align: center;
-    padding: 50px 20px;
+    padding: 50px 15px;
     background-color: #f3e5f5; /* Roxo muito suave */
     border-radius: 10px;
     margin: 20px auto;
