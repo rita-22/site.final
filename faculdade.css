@@ -155,7 +155,8 @@ nav {
     height: auto;             /* Mantém as proporções originais */
     border-radius: 8px;       /* Bordas arredondadas */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    margin: 0;                /* Remove margens extras */
+    margin: 0;   
+    object-fit: cover; /* Pode ser: contain, fill ou scale-down */
    
 }
 @media (max-width: 768px) {
